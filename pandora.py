@@ -5,8 +5,16 @@ Desenvolvido por leonidasgomes
 Visite meu guithub:leonidasgomes
 Contribuindo com Amor :)
 '''
-# Python 3 code
+# requests
+
 import urllib.request, urllib.parse, urllib.error
+   
+# graficos
+%matplotlib inline
+
+import  matplotlib.pyplot  as  plt 
+import  matplotlib.image  as  mpimg 
+
 
 nome=''
 
@@ -30,20 +38,25 @@ def casar(respo):
         casar(respagain)
   
 
-nome=input('Qual é o seu nome?')
+nome=input('Qual é o seu 1° nome?')
 
 
-
+if nome == 'Ney':
+     
+    url = 'https://media.licdn.com/dms/image/C4E03AQF0uyemBeO9XA/profile-displayphoto-shrink_800_800/0?e=1567036800&v=beta&t=VrAX8YFWfcarhS_uXt-_rHm90vRIyp5vaEzq0sYqBh0'
  
-url = 'https://media.licdn.com/dms/image/C4E03AQF0uyemBeO9XA/profile-displayphoto-shrink_800_800/0?e=1567036800&v=beta&t=VrAX8YFWfcarhS_uXt-_rHm90vRIyp5vaEzq0sYqBh0'
- 
 
-print("baixando com sua foto")
-f = urllib.request.urlopen(url)
-data = f.read()
-with open("img.jpg", "wb") as code:
-    code.write(data)    
- 
+    print("Baixando com sua foto")
+    f = urllib.request.urlopen(url)
+    data = f.read()
+    with open("/img/img.jpg", "wb") as code:
+        code.write(data)
+
+    from PIL import Image
+    im = Image.open("/img/img.jpg")
+    imgplot = plt.imshow(im)
+
+else:
 
 
 # Variavel com a Pergunta Inicial 
