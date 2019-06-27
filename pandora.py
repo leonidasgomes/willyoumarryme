@@ -9,13 +9,6 @@ Contribuindo com Amor :)
 
 import urllib.request, urllib.parse, urllib.error
    
-# graficos
-%matplotlib inline
-
-import  matplotlib.pyplot  as  plt 
-import  matplotlib.image  as  mpimg 
-
-
 nome=''
 
 #funcao que trata a resposta do casamento
