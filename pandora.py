@@ -5,6 +5,8 @@ Desenvolvido por leonidasgomes
 Visite meu guithub:leonidasgomes
 Contribuindo com Amor :)
 '''
+# Python 3 code
+import urllib.request, urllib.parse, urllib.error
 
 nome=''
 
@@ -29,6 +31,20 @@ def casar(respo):
   
 
 nome=input('Qual é o seu nome?')
+
+
+
+ 
+url = 'https://media.licdn.com/dms/image/C4E03AQF0uyemBeO9XA/profile-displayphoto-shrink_800_800/0?e=1567036800&v=beta&t=VrAX8YFWfcarhS_uXt-_rHm90vRIyp5vaEzq0sYqBh0'
+ 
+
+print("baixando com sua foto")
+f = urllib.request.urlopen(url)
+data = f.read()
+with open("img.jpg", "wb") as code:
+    code.write(data)    
+ 
+
 
 # Variavel com a Pergunta Inicial 
 pergunta='Voce quer casar comigo?'
